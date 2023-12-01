@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5CC4B77-1025-45A5-B7E4-B87EE8CF26BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CafeDeBliss</RootNamespace>
+    <AssemblyName>CafeDeBliss</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllUserControls\UC_Beverages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControls\UC_Beverages.Designer.cs">
+      <DependentUpon>UC_Beverages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControls\UC_Desserts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControls\UC_Desserts.Designer.cs">
+      <DependentUpon>UC_Desserts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControls\UC_Fastfood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControls\UC_Fastfood.Designer.cs">
+      <DependentUpon>UC_Fastfood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControls\UC_WelcomeC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControls\UC_WelcomeC.Designer.cs">
+      <DependentUpon>UC_WelcomeC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControls\UC_WelcomeLC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControls\UC_WelcomeLC.Designer.cs">
+      <DependentUpon>UC_WelcomeLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControls\UC_WelcomeM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControls\UC_WelcomeM.Designer.cs">
+      <DependentUpon>UC_WelcomeM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Report.Designer.cs">
+      <DependentUpon>Customer_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardA.Designer.cs">
+      <DependentUpon>DashboardA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardC.Designer.cs">
+      <DependentUpon>DashboardC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardLC.Designer.cs">
+      <DependentUpon>DashboardLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardM.Designer.cs">
+      <DependentUpon>DashboardM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCredentials.Designer.cs">
+      <DependentUpon>frmAddCredentials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewItems.Designer.cs">
+      <DependentUpon>frmAddNewItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOffers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOffers.Designer.cs">
+      <DependentUpon>frmAddOffers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBeverages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBeverages.Designer.cs">
+      <DependentUpon>frmBeverages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBill.Designer.cs">
+      <DependentUpon>frmBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePrices.Designer.cs">
+      <DependentUpon>frmChangePrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckOrder.Designer.cs">
+      <DependentUpon>frmCheckOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckOrder2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckOrder2.Designer.cs">
+      <DependentUpon>frmCheckOrder2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDesserts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesserts.Designer.cs">
+      <DependentUpon>frmDesserts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFastfood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFastfood.Designer.cs">
+      <DependentUpon>frmFastfood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlaceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlaceOrder.Designer.cs">
+      <DependentUpon>frmPlaceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegisterLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterLC.Designer.cs">
+      <DependentUpon>frmRegisterLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReviews.Designer.cs">
+      <DependentUpon>frmReviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStatus.Designer.cs">
+      <DependentUpon>frmStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Item_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item_Report.Designer.cs">
+      <DependentUpon>Item_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AllUserControls\UC_WelcomeA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControls\UC_WelcomeA.Designer.cs">
+      <DependentUpon>UC_WelcomeA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReviewCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Review_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Review_Report.Designer.cs">
+      <DependentUpon>Review_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sales_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales_Report.Designer.cs">
+      <DependentUpon>Sales_Report.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllUserControls\UC_Beverages.resx">
+      <DependentUpon>UC_Beverages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControls\UC_Desserts.resx">
+      <DependentUpon>UC_Desserts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControls\UC_Fastfood.resx">
+      <DependentUpon>UC_Fastfood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControls\UC_WelcomeC.resx">
+      <DependentUpon>UC_WelcomeC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControls\UC_WelcomeLC.resx">
+      <DependentUpon>UC_WelcomeLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControls\UC_WelcomeM.resx">
+      <DependentUpon>UC_WelcomeM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Report.resx">
+      <DependentUpon>Customer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardA.resx">
+      <DependentUpon>DashboardA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardC.resx">
+      <DependentUpon>DashboardC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardLC.resx">
+      <DependentUpon>DashboardLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardM.resx">
+      <DependentUpon>DashboardM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCredentials.resx">
+      <DependentUpon>frmAddCredentials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewItems.resx">
+      <DependentUpon>frmAddNewItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOffers.resx">
+      <DependentUpon>frmAddOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBeverages.resx">
+      <DependentUpon>frmBeverages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBill.resx">
+      <DependentUpon>frmBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePrices.resx">
+      <DependentUpon>frmChangePrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckOrder.resx">
+      <DependentUpon>frmCheckOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckOrder2.resx">
+      <DependentUpon>frmCheckOrder2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDesserts.resx">
+      <DependentUpon>frmDesserts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFastfood.resx">
+      <DependentUpon>frmFastfood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlaceOrder.resx">
+      <DependentUpon>frmPlaceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterLC.resx">
+      <DependentUpon>frmRegisterLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReviews.resx">
+      <DependentUpon>frmReviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatus.resx">
+      <DependentUpon>frmStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item_Report.resx">
+      <DependentUpon>Item_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllUserControls\UC_WelcomeA.resx">
+      <DependentUpon>UC_WelcomeA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReviewCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Review_Report.resx">
+      <DependentUpon>Review_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_Report.resx">
+      <DependentUpon>Sales_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
